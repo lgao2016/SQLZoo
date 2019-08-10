@@ -23,3 +23,8 @@ FROM nobel
 WHERE yr >= 2000
 GROUP BY yr, subject
 HAVING COUNT(winner) = 3
+
+-- Quiz: 6. Show the medium population density of each region
+SELECT region, SUM(population)/SUM(area) AS density 
+FROM bbc 
+GROUP BY region
